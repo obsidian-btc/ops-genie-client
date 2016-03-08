@@ -1,11 +1,11 @@
-module RaygunClient
+module OpsGenieClient
   class Settings < ::Settings
     def self.instance
       @instance ||= build
     end
 
     def self.data_source
-      'settings/raygun_client.json'
+      'settings/opsgenie_client.json'
     end
 
     def self.set(receiver)

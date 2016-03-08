@@ -8,4 +8,4 @@ gems
 *.log
 *scratch.*
 *.gem
-settings/raygun_client.json
+settings/opsgenie_client.json
