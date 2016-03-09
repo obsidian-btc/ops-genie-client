@@ -1,4 +1,4 @@
-module RaygunClient
+module OpsGenieClient
   class Settings < ::Settings
     def self.instance
       @instance ||= build

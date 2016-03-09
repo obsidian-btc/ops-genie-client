@@ -6,10 +6,6 @@ require 'http/commands'
 require 'telemetry'
 require 'settings'; Settings.activate
 
-require 'error_data'
-
-require 'raygun_client/client_info'
-require 'raygun_client/data/client_info'
-require 'raygun_client/data'
-require 'raygun_client/settings'
-require 'raygun_client/http/post'
+require 'opsgenie_client/settings'
+require 'opsgenie_client/alert/data'
+require 'opsgenie_client/alert/http/post'

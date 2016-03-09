@@ -2,8 +2,8 @@ require_relative './bench_init'
 
 context "Post Substitute and Telemetry" do
   context "Records Posts" do
-    post_data = RaygunClient::Controls::Data.example
-    substitute_post = RaygunClient::HTTP::Post::Substitute.build
+    post_data = OpsGenieClient::Controls::Alert::Data.example
+    substitute_post = OpsGenieClient::Alert::HTTP::Post::Substitute.build
 
     substitute_post.http_post.status_code = 'some-status-code'
     substitute_post.http_post.reason_phrase = 'some-reason-phrase'
