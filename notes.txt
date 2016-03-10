@@ -1,0 +1,19 @@
+OpsGenie Client Notes
+= = =
+
+OpsGenie Data to Send
+- - -
+- apiKey
+- message (130 chrs)
+  - summary or abstract of complete description
+- description (15,000 chrs)
+  - full formatted description of the alert
+- source
+  - use hostname
+- entity
+  - use service or component name
+- details (8,000 chrs)
+  - JSON object with fields
+  - serialize the measurement data
+- note
+  - use client_info.to_s
