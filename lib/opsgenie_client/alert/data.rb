@@ -4,7 +4,7 @@ module OpsGenieClient
       include Schema::DataStructure
 
       attribute :occurred_time, String
-      attribute :machine_name, String
+      attribute :hostname, String
       attribute :client, ClientInfo
       attribute :error, ErrorData
       attribute :tags, Array
