@@ -4,6 +4,8 @@ require 'http/commands'
 require 'telemetry'
 require 'settings'; Settings.activate
 
+require 'opsgenie_client/client_info'
 require 'opsgenie_client/settings'
+require 'opsgenie_client/alert/data/client_info'
 require 'opsgenie_client/alert/data'
 require 'opsgenie_client/alert/http/post'

@@ -1,6 +1,10 @@
 OpsGenie Client Notes
 = = =
 
+Posting
+- - -
+- add api key to data object when sending
+
 OpsGenie Data to Send
 - - -
 - apiKey

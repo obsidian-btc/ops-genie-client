@@ -2,38 +2,41 @@ module OpsGenieClient
   module Controls
     module Alert
       module Data
-        def self.example(custom_data=nil, tags=nil, time: nil)
-          custom_data ||= self.custom_data
-          tags ||= self.tags
-          time ||= self.time
-
+        def self.example
           data = OpsGenieClient::Data.build
 
-          data.occurred_time = time
-          data.machine_name = machine_name
-          data.tags = tags
-          data.custom_data = custom_data
-
-          data.client = OpsGenieClient::Data::ClientInfo.build
-
-          data.error = Controls::ErrorData.example
+          data.api_key = api_key
+          data.message = message
+          data.description = description
+          data.source = source
+          data.entity = entity
+          data.details = details
+          data.note = note
 
           data
         end
 
-        def self.time
-          ::Controls::Time.reference
+        def self.api_key
+          'some api key'
         end
 
-        def self.machine_name
-          'some machine name'
+        def self.message
+          'some message'
         end
 
-        def self.tags
-          ['some-tag']
+        def self.description
+          'some description'
         end
 
-        def self.custom_data
+        def self.source
+          'some source'
+        end
+
+        def self.entity
+          'some entity'
+        end
+
+        def self.details
           { 'someKey' => 'some value' }
         end
 

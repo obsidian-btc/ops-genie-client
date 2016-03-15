@@ -25,9 +25,8 @@ module OpsGenieClient
         end
 
         def self.configure(receiver, attr_name=nil)
-          attr_name ||= :post
+          attr_name ||= :opsgenie_post
           build.tap do |instance|
-            receiver.raygun_post = instance
             receiver.send "#{attr_name}=", instance
           end
         end
@@ -135,7 +134,7 @@ module OpsGenieClient
         module LogText
           module Posted
             def self.call(data, response)
-              "Status Code: #{response.status_code}, Reason Phrase: #{response.reason_phrase}, Error Message: #{data.error.message}, Custom Data: #{data.custom_data || '(none)'})"
+              "Status Code: #{response.status_code}, Reason Phrase: #{response.reason_phrase}, Message: #{data.message}, Details: #{data.details})"
             end
           end
         end
