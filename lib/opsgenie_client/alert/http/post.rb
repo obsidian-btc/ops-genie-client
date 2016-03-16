@@ -40,7 +40,7 @@ module OpsGenieClient
           logger.trace "Posting to OpsGenie"
 
           data.api_key = api_key
-          
+
           json_text = Serialize::Write.(data, :json)
 
           response = post(json_text)
@@ -113,7 +113,7 @@ module OpsGenieClient
         module Substitute
           def self.build
             Substitute::Post.build.tap do |substitute|
-              sink = OpsGenieClient::HTTP::Post.register_telemetry_sink(substitute)
+              sink = OpsGenieClient::Alert::HTTP::Post.register_telemetry_sink(substitute)
               substitute.sink = sink
             end
           end

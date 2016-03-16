@@ -1,7 +1,7 @@
-require_relative '../bench_init'
+require_relative 'bench_init'
 
 context "Post Alert Data to the OpsGenie API" do
-  test "Results in HTTP Status of 202 Accepted" do
+  test "Results in HTTP Status of 200 OK" do
     data = OpsGenieClient::Controls::Alert::Data.example
     response = OpsGenieClient::Alert::HTTP::Post.(data)
 

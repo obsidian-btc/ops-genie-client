@@ -9,7 +9,6 @@ module OpsGenieClient
       attribute :source
       attribute :entity
       attribute :details
-      attribute :note
 
       module Serializer
         def self.json

@@ -11,7 +11,6 @@ module OpsGenieClient
           data.source = source
           data.entity = entity
           data.details = details
-          data.note = note
 
           data
         end
@@ -40,28 +39,19 @@ module OpsGenieClient
           { 'someKey' => 'some value' }
         end
 
-        def self.note
-raise 'remove note field. it operates as a comments field. put client info somewhere else.'
-          'some note'
-        end
-
         module JSON
           def self.text
             ::JSON.generate(data)
           end
 
           def self.data
-            reference_time = Controls::Data.time
-
             {
-              'occurredOn' => reference_time,
-              'details' => {
-                'machineName' => Controls::Data.machine_name,
-                'client' => Client.data,
-                'error' => Error.data,
-                'tags' => Controls::Data.tags,
-                'userCustomData' => Controls::Data.custom_data
-              }
+              'apiKey' => Data.api_key,
+              'message' => Data.message,
+              'description' => Data.description,
+              'source' => Data.source,
+              'entity' => Data.entity,
+              'details' => Data.details
             }
           end
         end
