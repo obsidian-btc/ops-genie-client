@@ -3,7 +3,7 @@ OpsGenie Client Notes
 
 Posting
 - - -
-- api key: add to data in post
+- put gem version in client info
 
 OpsGenie Data to Send
 - - -

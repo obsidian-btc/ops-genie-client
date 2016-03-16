@@ -21,7 +21,7 @@ module OpsGenieClient
         end
 
         def self.message
-          'some message'
+          'some alert'
         end
 
         def self.description
@@ -41,6 +41,7 @@ module OpsGenieClient
         end
 
         def self.note
+raise 'remove note field. it operates as a comments field. put client info somewhere else.'
           'some note'
         end
 
