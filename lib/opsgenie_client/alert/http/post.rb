@@ -38,6 +38,9 @@ module OpsGenieClient
 
         def call(data)
           logger.trace "Posting to OpsGenie"
+
+          data.api_key = api_key
+          
           json_text = Serialize::Write.(data, :json)
 
           response = post(json_text)
@@ -50,23 +53,19 @@ module OpsGenieClient
         end
 
         def self.host
-          'api.raygun.io'
+          'api.opsgenie.com'
         end
 
-        def self.port
-          443
+        def self.path
+          '/v1/json/alert'
         end
 
-        def path
-          '/entries'
-        end
-
-        def uri
-          URI::HTTPS.build :host => self.class.host, :path => path
+        def self.uri
+          URI::HTTPS.build :host => host, :path => path
         end
 
         def post(request_body)
-          http_post.(request_body, uri, 'X-ApiKey' => api_key)
+          http_post.(request_body, self.class.uri)
         end
 
         def self.register_telemetry_sink(post)

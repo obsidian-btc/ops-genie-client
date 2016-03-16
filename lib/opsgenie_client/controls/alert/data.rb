@@ -3,7 +3,7 @@ module OpsGenieClient
     module Alert
       module Data
         def self.example
-          data = OpsGenieClient::Data.build
+          data = OpsGenieClient::Alert::Data.build
 
           data.api_key = api_key
           data.message = message
@@ -38,6 +38,10 @@ module OpsGenieClient
 
         def self.details
           { 'someKey' => 'some value' }
+        end
+
+        def self.note
+          'some note'
         end
 
         module JSON

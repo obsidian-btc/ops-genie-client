@@ -1,4 +1,6 @@
 require 'serialize'
+require 'casing'
+require 'schema'
 require 'connection'
 require 'http/commands'
 require 'telemetry'
