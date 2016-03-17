@@ -13,6 +13,6 @@ puts RUBY_DESCRIPTION
 
 require_relative '../init.rb'
 
-require 'opsgenie_client/controls'
+require 'ops_genie_client/controls'
 
 Telemetry::Logger::AdHoc.activate

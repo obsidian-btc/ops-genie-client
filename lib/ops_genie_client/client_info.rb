@@ -6,7 +6,7 @@ module OpsGenieClient
 
     def self.version
       '1'
-      Gem.loaded_specs['opsgenie_client'].version.version
+      Gem.loaded_specs['ops_genie_client'].version.version
     end
 
     def self.url

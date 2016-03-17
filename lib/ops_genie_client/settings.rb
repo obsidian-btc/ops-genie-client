@@ -5,7 +5,7 @@ module OpsGenieClient
     end
 
     def self.data_source
-      'settings/opsgenie_client.json'
+      'settings/ops_genie_client.json'
     end
 
     def self.set(receiver)
