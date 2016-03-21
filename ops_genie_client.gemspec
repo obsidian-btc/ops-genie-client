@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
-  s.name = 'opsgenie_client'
+  s.name = 'ops_genie_client'
   s.version = '0.1.0.0'
   s.summary = 'Client for the OpsGenie API using the Obsidian HTTP client'
   s.description = ' '
