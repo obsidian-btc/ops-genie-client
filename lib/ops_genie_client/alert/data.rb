@@ -10,6 +10,15 @@ module OpsGenieClient
       attribute :entity
       attribute :details
 
+      def ==(other)
+        self.class == other.class &&
+          message == other.message &&
+          description == other.description &&
+          source == other.source &&
+          entity == other.entity &&
+          details == other.details
+      end
+
       module Serializer
         def self.json
           JSON
