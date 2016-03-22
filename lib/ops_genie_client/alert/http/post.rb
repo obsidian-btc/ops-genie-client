@@ -25,7 +25,7 @@ module OpsGenieClient
         end
 
         def self.configure(receiver, attr_name=nil)
-          attr_name ||= :opsgenie_post
+          attr_name ||= :ops_genie_post
           build.tap do |instance|
             receiver.send "#{attr_name}=", instance
           end

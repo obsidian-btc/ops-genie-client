@@ -7,7 +7,7 @@ context "Configure a Receiver" do
     test "The receiver has an instance of the post object" do
       OpsGenieClient::Alert::HTTP::Post.configure receiver
 
-      assert(receiver.opsgenie_post.is_a? OpsGenieClient::Alert::HTTP::Post)
+      assert(receiver.ops_genie_post.is_a? OpsGenieClient::Alert::HTTP::Post)
     end
   end
 
