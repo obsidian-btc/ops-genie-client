@@ -2,7 +2,10 @@ module OpsGenieClient
   module Controls
     module Alert
       module Data
-        def self.example
+        def self.example(entity: nil, source: nil)
+          entity ||= self.entity
+          source ||= self.source
+
           data = OpsGenieClient::Alert::Data.build
 
           data.api_key = api_key
