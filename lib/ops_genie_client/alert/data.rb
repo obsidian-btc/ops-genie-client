@@ -5,6 +5,7 @@ module OpsGenieClient
 
       attribute :api_key
       attribute :message
+      attribute :alias
       attribute :description
       attribute :source
       attribute :entity
@@ -13,6 +14,7 @@ module OpsGenieClient
       def ==(other)
         self.class == other.class &&
           message == other.message &&
+          self.alias == other.alias &&
           description == other.description &&
           source == other.source &&
           entity == other.entity &&

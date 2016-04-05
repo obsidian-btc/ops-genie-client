@@ -12,8 +12,9 @@ module OpsGenieClient
           data.message = message
           data.description = description
           data.source = source
-          data.entity = entity
+          data.alias = self.alias
           data.details = details
+          data.entity = entity
 
           data
         end
@@ -24,6 +25,10 @@ module OpsGenieClient
 
         def self.message
           'some alert'
+        end
+
+        def self.alias
+          'some alias'
         end
 
         def self.description
@@ -51,6 +56,7 @@ module OpsGenieClient
             {
               'apiKey' => Data.api_key,
               'message' => Data.message,
+              'alias' => Data.alias,
               'description' => Data.description,
               'source' => Data.source,
               'entity' => Data.entity,
